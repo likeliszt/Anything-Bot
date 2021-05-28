@@ -18,7 +18,6 @@ from tqdm import tqdm
 import json
 import time
 
-token = 'ODIzMDY1MTQwNTUwNDM0ODU2.YFbZJQ.Hh8ny9IEFbmoB_6G1mpuNE8dnyk'
 
 client = discord.Client()
 tierScore = {
@@ -1001,4 +1000,4 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-client.run(token)
+client.run(os.environ['token'])
